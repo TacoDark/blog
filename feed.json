@@ -1,0 +1,27 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Ryan&#x27;s Blog",
+    "description": "",
+    "home_page_url": "https://blog.ryanpc.org",
+    "feed_url": "https://blog.ryanpc.org/feed.json",
+    "user_comment": "",
+    "author": {
+        "name": "Ryan K"
+    },
+    "items": [
+        {
+            "id": "https://blog.ryanpc.org/introducing-my-new-project-shoot-n-grab.html",
+            "url": "https://blog.ryanpc.org/introducing-my-new-project-shoot-n-grab.html",
+            "title": "Introducing my new project, Shoot n&#x27; Grab",
+            "summary": "INTRODUCING.... Shoot n' Grab! Shoot n' Grab is a unity game I am going to start developing, where you well...&nbsp;Shoot n' Grab. This game will be a high paced fighting game where you fight npcs (and maybe people in the future), while grabbing stuff and&hellip;",
+            "content_html": "\n    <h2 id=\"introducing-shoot-n-grab\">\n      INTRODUCING.... Shoot n' Grab!\n    </h2>\n\n  <p>\n    Shoot n' Grab is a unity game I am going to start developing, where you well...&nbsp;Shoot n' Grab. This game will be a high paced fighting game where you fight npcs (and maybe people in the future), while grabbing stuff and using it to your advantage. You start off with a gun, and you can grab items to improve your gun and cause chaos..<br><br><br>\n  </p>\n\n    <h2 id=\"when-will-this-game-be-released\">\n      When will this game be released?\n    </h2>\n\n  <p>\n    Not in 2025, thats for sure. The discord for the game is at the end of the blog post, if you want updates.<br><br><br><br>\n  </p>\n\n    <h2 id=\"will-you-add-updates-to-game-progress-on-your-bloglessbrgreater\">\n      Will you add updates to game progress on your blog?<br>\n    </h2>\n\n  <p>\n    Yuuup.<br><br><br><br><br><br>\n  </p>\n\n    <h2 id=\"thats-all\">\n      That's All!\n    </h2>\n\n  <p>\n    See you later folks. I'll update you soon, and heres the discord.\n  </p>\n\n  <p>\n    https://discord.gg/Pn2xFYCusD\n  </p>",
+            "author": {
+                "name": "Ryan K"
+            },
+            "tags": [
+            ],
+            "date_published": "2025-09-12T21:40:09-05:00",
+            "date_modified": "2025-09-12T21:40:09-05:00"
+        }
+    ]
+}

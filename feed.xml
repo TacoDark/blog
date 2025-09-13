@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <title>Ryan&#x27;s Blog</title>
+    <link href="https://blog.ryanpc.org/feed.xml" rel="self" />
+    <link href="https://blog.ryanpc.org" />
+    <updated>2025-09-12T21:40:09-05:00</updated>
+    <author>
+        <name>Ryan K</name>
+    </author>
+    <id>https://blog.ryanpc.org</id>
+
+    <entry>
+        <title>Introducing my new project, Shoot n&#x27; Grab</title>
+        <author>
+            <name>Ryan K</name>
+        </author>
+        <link href="https://blog.ryanpc.org/introducing-my-new-project-shoot-n-grab.html"/>
+        <id>https://blog.ryanpc.org/introducing-my-new-project-shoot-n-grab.html</id>
+
+        <updated>2025-09-12T21:40:09-05:00</updated>
+            <summary>
+                <![CDATA[
+                    INTRODUCING.... Shoot n' Grab! Shoot n' Grab is a unity game I am going to start developing, where you well...&nbsp;Shoot n' Grab. This game will be a high paced fighting game where you fight npcs (and maybe people in the future), while grabbing stuff and&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                
+    <h2 id="introducing-shoot-n-grab">
+      INTRODUCING.... Shoot n' Grab!
+    </h2>
+
+  <p>
+    Shoot n' Grab is a unity game I am going to start developing, where you well...&nbsp;Shoot n' Grab. This game will be a high paced fighting game where you fight npcs (and maybe people in the future), while grabbing stuff and using it to your advantage. You start off with a gun, and you can grab items to improve your gun and cause chaos..<br><br><br>
+  </p>
+
+    <h2 id="when-will-this-game-be-released">
+      When will this game be released?
+    </h2>
+
+  <p>
+    Not in 2025, thats for sure. The discord for the game is at the end of the blog post, if you want updates.<br><br><br><br>
+  </p>
+
+    <h2 id="will-you-add-updates-to-game-progress-on-your-bloglessbrgreater">
+      Will you add updates to game progress on your blog?<br>
+    </h2>
+
+  <p>
+    Yuuup.<br><br><br><br><br><br>
+  </p>
+
+    <h2 id="thats-all">
+      That's All!
+    </h2>
+
+  <p>
+    See you later folks. I'll update you soon, and heres the discord.
+  </p>
+
+  <p>
+    https://discord.gg/Pn2xFYCusD
+  </p>
+            ]]>
+        </content>
+    </entry>
+</feed>
