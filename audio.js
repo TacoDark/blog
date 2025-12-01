@@ -448,10 +448,8 @@ function printToTerminal(text, className = '') {
         const div = document.createElement('div');
         div.className = 'output-line ' + className;
         div.textContent = line;
-        const terminalOutput = document.querySelector('#output');
-        // Insert before the player controls
-        const playerControls = document.querySelector('.player-controls');
-        terminalOutput.insertBefore(div, playerControls);
+        const terminalOutput = document.getElementById('terminal-output');
+        terminalOutput.appendChild(div);
     });
     terminalContainer.scrollTop = terminalContainer.scrollHeight;
 }

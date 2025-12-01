@@ -13,16 +13,18 @@
             padding: 15px;
             border: 1px solid #00ff00;
             background: rgba(0, 255, 0, 0.05);
+            font-size: 1rem;
         }
 
         .progress-bar {
             width: 100%;
-            height: 20px;
+            height: 25px;
             background: rgba(0, 255, 0, 0.1);
             border: 1px solid #00ff00;
             margin: 10px 0;
             position: relative;
             cursor: pointer;
+            overflow: hidden;
         }
 
         .progress-fill {
@@ -30,32 +32,39 @@
             background: #00ff00;
             width: 0%;
             transition: width 0.1s linear;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
 
         .time-display {
             display: flex;
             justify-content: space-between;
             font-family: 'Courier New', monospace;
-            font-size: 0.9em;
+            font-size: 1rem;
             margin-top: 5px;
         }
 
         .now-playing {
-            padding: 10px;
+            padding: 15px;
             margin: 10px 0;
             border-left: 3px solid #00ff00;
             background: rgba(0, 255, 0, 0.05);
+            font-size: 1.1rem;
         }
 
         .track-list {
             margin: 15px 0;
+            font-size: 1rem;
         }
 
         .track-item {
-            padding: 8px;
+            padding: 10px;
             cursor: pointer;
             transition: background 0.2s;
             border-left: 2px solid transparent;
+            font-size: 1rem;
+            line-height: 1.5;
         }
 
         .track-item:hover {
@@ -72,8 +81,10 @@
             color: #00ff00;
             font-weight: bold;
             cursor: pointer;
-            padding: 8px;
+            padding: 10px;
             transition: background 0.2s;
+            font-size: 1rem;
+            line-height: 1.5;
         }
 
         .folder-item:hover {
@@ -85,11 +96,12 @@
         }
 
         .breadcrumb {
-            padding: 10px;
+            padding: 12px;
             background: rgba(0, 255, 0, 0.05);
             border: 1px solid #00ff00;
             margin-bottom: 15px;
             font-family: 'Courier New', monospace;
+            font-size: 1rem;
         }
 
         .volume-control {
@@ -97,15 +109,17 @@
             align-items: center;
             gap: 10px;
             margin: 10px 0;
+            font-size: 1rem;
         }
 
         .volume-slider {
             flex: 1;
-            height: 5px;
+            height: 8px;
             background: rgba(0, 255, 0, 0.2);
             border: 1px solid #00ff00;
             cursor: pointer;
             position: relative;
+            overflow: hidden;
         }
 
         .volume-fill {
@@ -113,6 +127,9 @@
             background: #00ff00;
             width: 100%;
             transition: width 0.1s;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
 
         .control-buttons {
@@ -123,12 +140,13 @@
         }
 
         .btn {
-            padding: 8px 15px;
+            padding: 10px 16px;
             border: 1px solid #00ff00;
             background: transparent;
             color: #00ff00;
             cursor: pointer;
             font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
             transition: all 0.2s;
         }
 
@@ -142,7 +160,7 @@
 
         .visualizer {
             width: 100%;
-            height: 60px;
+            height: 80px;
             background: rgba(0, 255, 0, 0.05);
             border: 1px solid #00ff00;
             margin: 10px 0;
@@ -158,6 +176,15 @@
             min-height: 2px;
             transition: height 0.1s;
         }
+
+        .output-line {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        #terminal-output {
+            margin-top: 20px;
+        }
     </style>
 </head>
 
@@ -169,11 +196,12 @@
         </header>
 
         <main id="output">
-            <!-- Audio Player Interface -->
+            <!-- Now Playing Display -->
             <div class="now-playing">
                 <div id="now-playing-text">No track loaded</div>
             </div>
 
+            <!-- Audio Player Controls -->
             <div class="player-controls">
                 <div class="control-buttons">
                     <button class="btn" id="play-btn">▶ Play</button>
@@ -206,12 +234,19 @@
                 </div>
             </div>
 
+            <!-- Current Directory Breadcrumb -->
             <div class="breadcrumb" id="breadcrumb">
                 📂 /mp3
             </div>
 
+            <!-- Track/Folder List -->
             <div class="track-list" id="track-list">
                 <!-- Track list will be populated here -->
+            </div>
+
+            <!-- Terminal Output Area -->
+            <div id="terminal-output">
+                <!-- Command output will appear here -->
             </div>
         </main>
 
