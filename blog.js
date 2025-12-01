@@ -21,6 +21,18 @@ const posts = [
         title: 'Coming Soon',
         date: '???',
         content: 'Coming soon...'
+    },
+    {
+        id: '4',
+        title: 'Coming Soon',
+        date: '???',
+        content: 'Coming soon...'
+    },
+    {
+        id: '5',
+        title: 'Coming Soon',
+        date: '???',
+        content: 'Coming soon...'
     }
 ];
 
