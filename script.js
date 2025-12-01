@@ -30,10 +30,7 @@ const directories = {
 const commands = {
     'help': 'List all available commands',
     'about': 'Display information about me',
-    'projects': 'View my projects',
-    'skills': 'List my technical skills',
-    'socials': 'Display social media links',
-    'email': 'Get my contact email',
+    'info': 'View projects, skills, socials & email',
     'blog': 'Enter the blog system',
     'audio': 'Open the audio player',
     'clear': 'Clear the terminal output',
@@ -96,28 +93,29 @@ function executeCommand(cmdStr) {
             printOutput("Hi, I'm Ryan.\nI'm a person who loves to tinker with technology, I also like engineering and all that yata yata.\nI either make stuff work, or make it go kaboom.");
             break;
 
-        case 'projects':
-            let projectText = 'My Projects:\n';
+        case 'info':
+            let infoText = '=== RYAN\'S INFO ===\n\n';
+
+            // Projects
+            infoText += 'PROJECTS:\n';
             directories.projects.forEach(p => {
-                projectText += `  * ${p.name.padEnd(20)} - ${p.description}\n`;
+                infoText += `  • ${p.name} - ${p.description}\n`;
             });
-            printOutput(projectText);
-            break;
 
-        case 'skills':
-            printOutput('Technical Skills:\n' + directories.skills.map(s => `  * ${s}`).join('\n'));
-            break;
+            // Skills
+            infoText += '\nSKILLS:\n  ';
+            infoText += directories.skills.join(', ');
 
-        case 'socials':
-            let socialText = 'Connect with me:\n';
+            // Socials
+            infoText += '\n\nSOCIALS:\n';
             directories.socials.forEach(s => {
-                socialText += `  ${s.name}: ${s.url}\n`;
+                infoText += `  ${s.name}: ${s.url}\n`;
             });
-            printOutput(socialText);
-            break;
 
-        case 'email':
-            printOutput('You can reach me at: ryan@ryanpc.org');
+            // Email
+            infoText += '\nEMAIL: ryan@ryanpc.org\n';
+
+            printOutput(infoText);
             break;
 
         case 'blog':
@@ -155,4 +153,5 @@ function printOutput(text, className = '') {
 // Initial greeting
 window.onload = () => {
     input.focus();
+    executeCommand('info');
 };
