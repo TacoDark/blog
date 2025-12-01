@@ -7,14 +7,14 @@ const posts = [
     {
         id: '1',
         title: 'Hello World',
-        date: '2023-11-30',
-        content: 'Welcome to my new terminal-styled blog.\n\nI decided to build this because standard web designs are getting boring. This brings back the nostalgia of the command line.\n\nStay tuned for more updates!'
+        date: '2025-11-30',
+        content: 'Welcome to my new terminal-styled blog.\n\nI decided to build this because standard web designs are getting boring. This brings back pure creativity and simplicity.\n\nStay tuned for more updates!'
     },
     {
         id: '2',
-        title: 'Coming Soon',
-        date: '???',
-        content: 'Coming soon...'
+        title: 'Bots crawling my site, solving it. Part 1/Who the hell knows?',
+        date: '2025-11-30',
+        content: 'Bots are crawling my site and im gonna try to stop it.\n\nI started by using Cloudflare to block them, but they just keep coming. I have no idea how to stop them.\n\nIt has been driving me crazy!\n\nThe city of these guys change everytime, but sometimes there useragent. There has been a few ISP/Orgs that I have logged from this, and some goodies.\n\nThey all for some reason either have CN (China) language packs most of the time, but sometimes US.\n\nThe timezones, referrer, and screen should be logged, but nope. If the timezone is logged, its incorrect.\n\nGoogle LLC and this 16 Collyer Quay is the organizaitons targeting me.\n\nThe referrer should say my site, but it doesnt. Is it some AI scanning or what?\n\nThey visit on windows, iphones, androids, basically anything.\n\nFun Fact: I have blocked these bots, but they still come back!\n\nThese guys just keep scanning my things for wordpress login pages and more, so i am going to report the scanner I found to the abuse email for AWS.\n\nI will update soon.'
     },
     {
         id: '3',
