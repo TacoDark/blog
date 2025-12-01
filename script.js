@@ -35,6 +35,7 @@ const commands = {
     'socials': 'Display social media links',
     'email': 'Get my contact email',
     'blog': 'Enter the blog system',
+    'audio': 'Open the audio player',
     'clear': 'Clear the terminal output',
     'history': 'Show command history'
 };
@@ -121,6 +122,10 @@ function executeCommand(cmdStr) {
 
         case 'blog':
             window.location.href = 'blog.html';
+            break;
+
+        case 'audio':
+            window.location.href = 'audio.html';
             break;
 
         case 'history':
