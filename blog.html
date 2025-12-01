@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RyanPC.org - Blog">
+    <title>RyanPC Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="crt-overlay"></div>
+    <div class="terminal-container">
+        <header>
+            <p>RyanPC Blog System v1.0. Type <span class="highlight">'help'</span> for commands.</p>
+        </header>
+
+        <main id="output">
+            <!-- Terminal output goes here -->
+        </main>
+
+        <div class="input-line">
+            <span class="prompt">reader@blog:~$</span>
+            <input type="text" id="command-input" aria-label="Terminal Command Input" autocomplete="off"
+                spellcheck="false" autofocus>
+        </div>
+    </div>
+    <script src="blog.js"></script>
+</body>
+
+</html>

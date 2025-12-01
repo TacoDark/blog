@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+
+:root {
+    --bg-color: #0d0d0d;
+    --text-color: #33ff33;
+    --prompt-color: #ffb000;
+    --error-color: #ff3333;
+    --link-color: #33ffff;
+    --font-family: 'Fira Code', monospace;
+    --glow-shadow: 0 0 5px rgba(51, 255, 51, 0.5);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    height: 100dvh;
+    overflow: hidden;
+    /* Prevent body scroll, handle in terminal-container */
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+/* CRT Overlay Effect */
+.crt-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100dvh;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%,
+            rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg,
+            rgba(255, 0, 0, 0.06),
+            rgba(0, 255, 0, 0.02),
+            rgba(0, 0, 255, 0.06));
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0.8;
+}
+
+.terminal-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    scrollbar-width: thin;
+    scrollbar-color: var(--text-color) var(--bg-color);
+}
+
+/* Scrollbar styling */
+.terminal-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminal-container::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+.terminal-container::-webkit-scrollbar-thumb {
+    background-color: var(--text-color);
+    border-radius: 4px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+#ascii-art {
+    font-size: 10px;
+    line-height: 10px;
+    white-space: pre;
+    color: var(--text-color);
+    text-shadow: var(--glow-shadow);
+    margin-bottom: 20px;
+    overflow-x: hidden;
+    /* Clip if too small */
+}
+
+.highlight {
+    color: var(--link-color);
+    font-weight: bold;
+}
+
+#output {
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    /* Preserve formatting but wrap text */
+}
+
+.output-line {
+    margin-bottom: 5px;
+    animation: fadeIn 0.1s ease-in-out;
+}
+
+.command-echo {
+    color: var(--prompt-color);
+    font-weight: bold;
+}
+
+.input-line {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    /* Space at bottom */
+}
+
+.prompt {
+    color: var(--prompt-color);
+    margin-right: 10px;
+    white-space: nowrap;
+    text-shadow: 0 0 2px var(--prompt-color);
+}
+
+#command-input {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: 16px;
+    flex: 1;
+    outline: none;
+    caret-color: var(--text-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--link-color);
+}
+
+a:hover {
+    background-color: var(--link-color);
+    color: var(--bg-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    #ascii-art {
+        font-size: 6px;
+        /* Smaller ASCII on mobile */
+        line-height: 6px;
+    }
+
+    .terminal-container {
+        padding: 10px;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    #command-input {
+        font-size: 14px;
+    }
+}
